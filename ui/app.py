@@ -8,7 +8,7 @@ if st.button("Analyze Portfolio"):
         with st.spinner(f"Analyzing {username}'s repositories..."):
             try:
                 # IMPORTANT: We will change this URL in Phase 4!
-                response = requests.post(f"http://127.0.0.1:8000/review?username={username}")
+                response = requests.post(f"https://student-github-reviewer-kyat.onrender.com/review?username={username}")
                 if response.status_code == 200:
                     data = response.json()
                     st.success("Analysis Complete!")
